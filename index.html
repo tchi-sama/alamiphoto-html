@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dist/output.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div x-data="{isOpen:false}" class="h-screen bg-red-200 bg-cover bg-center bg-[url('../src/assets/wedding1.jpg')]">
+        <div class="container p-8 mx-auto flex flex-col h-full text-[#fffb] pt-16">
+
+
+            <nav class=" lg:hidden  ">
+                <div class="flex justify-between items-center">
+                    <img src="./src/assets/logo.png" class="w-40 h-20 object-cover" alt="">
+                    <button @click="isOpen=!isOpen">
+                        <img src="./src/assets/icons/menu.png" class="w-10" alt="">
+                    </button>
+                </div>
+            </nav>
+
+
+
+            <nav class=" items-end rounded-xl hidden lg:flex uppercase  gap-16 justify-center ">
+                <div class="flex-1 flex justify-between">
+                    <div class="xl:flex gap-4 hidden">
+                        <a href="#">
+                            <img class="h-6" src="./src/assets/icons/facebook.png">
+                        </a>
+                        <a href="#">
+                            <img class="h-6" src="./src/assets/icons/instagram.png">
+                        </a>
+                    </div>
+                    <ul class="flex gap-10 drop-shadow-md border-t border-[#fff5] p-1 px-4">
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">wedding</a></li>
+                        <li><a href="#">photo</a></li>
+                    </ul>
+                </div>
+                <img src="./src/assets/logo.png" class="w-40 h-20 object-cover" alt="">
+                <div class="flex-1 flex justify-start">
+                    <ul class="flex gap-10  border-t border-[#fff5] p-1 px-4">
+                        <li><a href="#">films</a></li>
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="flex justify-between items-center  flex-1">
+                <button
+                    class="bg-[#fff2] p-4 rounded-lg hover:scale-105 hover:bg-[#fff3] duration-200 shadow-xl border border-[#fff3]">
+                    <img class="w-8" src="./src/assets/icons/left-arrow.png" />
+                </button>
+                <button
+                    class="bg-[#fff2] p-4 rounded-lg  hover:scale-105 hover:bg-[#fff3] duration-200 shadow-xl border border-[#fff3]">
+                    <img class="w-8" src="./src/assets/icons/right-arrow.png" />
+                </button>
+            </div>
+
+            <div x-show="isOpen" class="fixed bg-[#0005] backdrop-blur-md w-screen z-50 h-[100vh] top-0 left-0 ">
+                <button @click="isOpen=false" class="absolute top-8 right-8 w-12 h-12 flex justify-center items-center rounded-xl bg-[#fff3]">
+                    <img src="./src/assets/icons/close.png" class="w-6" alt="">
+                </button>
+                <div class="flex w-full h-full items-center flex-col p-8 gap-8">
+                    <img src="./src/assets/logo.png" class="w-44 h-24 object-cover" alt="">
+                    <div class="flex flex-col gap-8 items-center w-full flex-1">
+                        <ul class="flex gap-10 drop-shadow-md flex-col items-center  text-2xl uppercase p-1 px-4">
+                            <li><a href="#">home</a></li>
+                            <li><a href="#">wedding</a></li>
+                            <li><a href="#">photo</a></li>
+                        </ul>
+                        <hr class="w-[50%] opacity-20 ">
+                        <ul class="flex gap-10 drop-shadow-md flex-col items-center  text-2xl uppercase p-1 px-4">
+                            <li><a href="#">films</a></li>
+                            <li><a href="#">about</a></li>
+                            <li><a href="#">contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class=" gap-4 flex">
+                        <a href="#">
+                            <img class="h-6" src="./src/assets/icons/facebook.png">
+                        </a>
+                        <a href="#">
+                            <img class="h-6" src="./src/assets/icons/instagram.png">
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="px-4">
+        <div class="py-8 text-gray-700 flex flex-col items-center">
+            <p class="text-lg py-8 px-4 font-medium max-w-2xl  rounded-xl text-center mx-auto">
+                <span class="text-2xl ">“</span>
+                IF YOU ARE HERE READING THIS, IT MEANS YOU ARE LOOKING FOR A SOULFUL
+                PHOTOGRAPHER WHO HAS UNIQUE EYES DOCUMENTING YOUR STORY IN AN ARTISTIC AND HONEST WAY.
+                <span class="text-2xl ">“</span>
+                <hr class="w-[80%] my-8" />
+            <h2 class="">FEATURE IN</h2>
+            <div class="flex flex-col lg:flex-row gap-12 py-12">
+                <img class="w-[300px] h-[100px]" src="./src/assets/feature/f1.png" alt="">
+                <img class="w-[300px] h-[100px]" src="./src/assets/feature/f2.png" alt="">
+            </div>
+            <hr class="w-[30%] my-8" />
+            </p>
+        </div>
+    </div>
+
+
+
+    <div class="px-4">
+        <div class="flex flex-col items-center gap-8">
+            <h1 class="text-4xl text-gray-700 py-4">MODERN WEDDING PHOTOGRAPHY</h1>
+            <!-- <img class="w-[60vw] rounded-lg drop-shadow-2xl z-10 block lg:hidden"           src="./src/assets/showCase/showCase2.png"> -->
+            <div class="flex items-center relative justify-center gap-8 py-4  lg:hidden ">
+                <img class="w-[30vw] right-[80%] absolute rounded-lg drop-shadow-2xl z-0 -rotate-3"
+                    src="./src/assets/showCase/showCase1.png">
+                <img class="w-[40vw] rounded-lg drop-shadow-2xl z-10 " src="./src/assets/showCase/showCase2.png">
+                <img class="w-[30vw] left-[80%] absolute rounded-lg drop-shadow-2xl z-0 rotate-3"
+                    src="./src/assets/showCase/showCase3.png">
+            </div>
+            <div class="lg:flex hidden items-center justify-center gap-8 py-4">
+                <img class="w-[20vw] rounded-lg drop-shadow-2xl z-0 -rotate-3"
+                    src="./src/assets/showCase/showCase1.png">
+                <img class="w-[25vw] rounded-lg drop-shadow-2xl z-10 " src="./src/assets/showCase/showCase2.png">
+                <img class="w-[20vw] rounded-lg drop-shadow-2xl z-0 rotate-3" src="./src/assets/showCase/showCase3.png">
+            </div>
+        </div>
+        <hr class="w-[30%] mx-auto my-8" />
+    </div>
+
+
+
+    <div class="px-4">
+        <div class="flex flex-col-reverse lg:flex-row container mx-auto py-8 gap-8 mt-10 ">
+            <div class="flex-1">
+                <h2 class="text-5xl py-8">Our Approach</h2>
+                <p class="text-xl text-gray-700 ">
+                    Wedding photographer in Marrakech working mainly in Morocco, me and my team we are passionate about
+                    timeless photography with every moment we capture. We believe that a really awesome photograph
+                    should always create some level of emotional response in the viewer. We want to journal stories with
+                    images over words.
+                    Our approach as your Marrakech wedding photographer team is to document your love story in a
+                    creative way – photos told truthfully and expressively, not only the magnificent moments but also
+                    some secretly significant moments, in between, for a style of artistic storytelling that you can
+                    look back on those days, months and years later and still bought you back the little feelings and
+                    emotions of your day.
+                </p>
+                <h3 class="text-lg py-4 font-bold text-gray-800">” WE WANT TO JOURNAL STORIES WITH IMAGES OVER WORDS.”
+                </h3>
+            </div>
+            <img class="lg:w-[50vw] max-w-[800px] rounded-xl drop-shadow-2xl w-full" src="./src/assets/ourapproach.png"
+                alt="">
+        </div>
+    </div>
+
+
+    <hr class="w-[50%] my-12 mx-auto" />
+    <div class="flex gap-8 container mx-auto my-10 items-start">
+        <img class="rounded-2xl drop-shadow-2xl -rotate-2 w-[25vw] lg:block hidden" src="./src/assets/contact.png"
+            alt="">
+        <div class="flex flex-col gap-4 flex-1 px-8">
+            <h1 class="text-3xl font-bold ">GET IN TOUCH</h1>
+            <h4 class="text-gray-500">You can also write to me directly via <a href="#"
+                    class="link">contact@alamiphotography.com</a> or call +212676545984</h4>
+            <div class="flex flex-col w-full">
+                <div class="flex flex-col md:flex-row w-full gap-4">
+                    <input placeholder="first name" class="border-b flex-1 py-4 text-xl outline-none px-2" type="text"
+                        name="" id="">
+                    <input placeholder="last name" class="border-b flex-1 py-4 text-xl outline-none px-2" type="text"
+                        name="" id="">
+                </div>
+                <div class="flex  flex-col md:flex-row w-full gap-4">
+                    <input placeholder="email address" class="border-b flex-1 py-4 text-xl outline-none px-2"
+                        type="text" name="" id="">
+                    <input placeholder="phone number" class="border-b flex-1 py-4 text-xl outline-none px-2" type="text"
+                        name="" id="">
+                </div>
+                <div class="flex  flex-col md:flex-row w-full gap-4">
+                    <input placeholder="object" class="border-b flex-1 py-4 text-xl outline-none px-2" type="text"
+                        name="" id="">
+                    <input placeholder="ceremony location" class="border-b flex-1 py-4 text-xl outline-none px-2"
+                        type="text" name="" id="">
+                </div>
+                <div class="flex  flex-col md:flex-row w-full gap-4">
+                    <input placeholder="scheduled date" class="border-b flex-1 py-4 text-xl outline-none px-2"
+                        type="text" name="" id="">
+                    <input placeholder="how did you find us?" class="border-b flex-1 py-4 text-xl outline-none px-2"
+                        type="text" name="" id="">
+                </div>
+                <div class="flex  flex-col md:flex-row w-full gap-4">
+                    <textarea placeholder="message" class="border-b h-36 flex-1 py-4 text-xl outline-none px-2"
+                        type="text" name="" id=""></textarea>
+                </div>
+                <div>
+                    <button
+                        class="border px-8 py-3 my-8 bg-gray-800 text-white font-normal rounded hover:bg-gray-200 ">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
